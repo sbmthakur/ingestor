@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Audit Python dependencies 
     steps:
+      - name: Checkout directory  
+        uses: actions/checkout@v3
       - uses: sbmthakur/Ossie-GHA@main
         with:
           OSSIEBOT_ID: ${{ secrets.OSSIEBOT_ID }}
