@@ -1,0 +1,28 @@
+Example endpoint returning a list of radars
+---
+tags:
+  - radars
+parameters:
+  - name: date
+    in: body
+    required: true
+    schema:
+      required:
+        - date
+      properties:
+        date:
+          type: string
+          description: Date for which you want to retrieve the radars.
+          default: "2021-05-21"
+          example: "2021-05-21"
+
+responses:
+  200:
+    description: A list of radars available for the given date
+    schema:
+      properties:
+        radars:
+          type: array
+          description: List of radars
+          example: ['KAMA', 'KTLX']
+      

@@ -1,0 +1,13 @@
+node_modules/
+**/__pycache__
+*.png
+*.nc4
+KTLX*
+KAMA*
+KCAE*
+KBLX*
+KABR*
+
+
+# Allow
+!ingestor/sample_plot.png

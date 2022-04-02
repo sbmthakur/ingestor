@@ -1,0 +1,34 @@
+Example endpoint returning a plot (in PNG format)
+---
+tags:
+  - plot
+parameters:
+  - name: date
+    in: body
+    required: true
+    schema:
+      required:
+        - date
+        - radar
+      properties:
+        date:
+          type: string
+          description: Date for which you want to retrieve the radars.
+          default: "2021-05-21"
+          example: "2021-05-21"
+        radar:
+          type: string
+          description: Radar ID for which you want the plot.
+          default: "KTLX"
+          example: "KTLX"
+
+responses:
+  200:
+    description: An image of the plot
+    content:
+      image/png:
+        schema:
+          type: string
+          format: binary
+
+      
