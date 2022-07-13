@@ -18,9 +18,9 @@ jobs:
           echo 'alias lll=ls' >> ~/.bashrc
           lll
       - name: Test alias
-        shell: bash -l {0}
+        shell: bash {0}
         run: |
           shopt -s expand_aliases
-          #source ~/.bashrc
+          source ~/.bashrc
           lll
         
