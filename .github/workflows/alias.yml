@@ -14,7 +14,7 @@ jobs:
       - name: Print a greeting
         run: |
           shopt -s expand_aliases
-          export alias lll=ls
+          echo 'export alias lll=ls' >> ~/.bashrc
       - name: Test alias
         run: |
           lll
