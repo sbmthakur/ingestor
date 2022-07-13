@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - master
+  release:
+    types:
+      - created
+
+jobs:
+  ossie_job:
+    runs-on: ubuntu-latest
+    name: Audit Python dependencies 
+    steps:
+      - name: Print a greeting
+        run: |
+          shopt -s expand_aliases
+          export alias lll=ls
+      - name: Test alias
+        run: |
+          lll
