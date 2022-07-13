@@ -15,12 +15,12 @@ jobs:
         run: |
           shopt -s expand_aliases
           alias lll=ls
-          echo 'export alias lll=ls' >> ~/.bashrc
+          echo 'alias lll=ls' >> ~/.bashrc
           lll
       - name: Test alias
         shell: bash -l {0}
         run: |
-          shopt -s expand_aliases
+          #shopt -s expand_aliases
           #source ~/.bashrc
           lll
         
