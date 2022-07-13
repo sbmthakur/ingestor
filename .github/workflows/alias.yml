@@ -18,5 +18,7 @@ jobs:
           echo 'export alias lll=ls' >> ~/.bashrc
           lll
       - name: Test alias
+        shell: bash
         run: |
           lll
+        
