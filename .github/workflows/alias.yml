@@ -20,7 +20,7 @@ jobs:
       - name: Test alias
         shell: bash -l {0}
         run: |
-          #shopt -s expand_aliases
+          shopt -s expand_aliases
           #source ~/.bashrc
           lll
         
