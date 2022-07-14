@@ -17,7 +17,7 @@ jobs:
       uses: aquasecurity/tracee-action@v0.1.0-start
 
     - name: Your CI Pipeline Step
-      run: for i in {1..20}; do sleep 2; done
+      run: pip install dateutils
 
     - name: Stop and Check Tracee results and create a PR
       uses: aquasecurity/tracee-action@v0.1.0-stop
