@@ -11,16 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     name: Audit Python dependencies 
     steps:
-      - name: Print a greeting
+      - name: Test bash alias
+        shell: bash
         run: |
-          shopt -s expand_aliases
-          alias lll=ls
-          echo 'alias lll=ls' >> ~/.bashrc
-          lll
-      - name: Test alias
-        shell: bash {0}
+          rc=/tmp/rcfile
+          echo 'shopt -s expand_aliases' > $rc
+          echo 'alias lll="ls -l" ' >> $rc
+
+      - shell: bash
         run: |
-          shopt -s expand_aliases
-          source ~/.bashrc
+          source /tmp/rcfile
           lll
-        
