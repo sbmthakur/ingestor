@@ -22,3 +22,8 @@ jobs:
         run: |
           source /tmp/rcfile
           lll
+          
+      - uses: step-security/harden-runner@74b568e8591fbb3115c70f3436a0c6b0909a8504
+        with:
+          egress-policy: audit
+          disable-telemetry: true
