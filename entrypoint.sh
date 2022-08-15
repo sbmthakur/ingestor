@@ -2,6 +2,7 @@
 # The --login ensures the bash configuration is loaded,
 # enabling Conda.
 
+
 # Enable strict mode.
 set -euo pipefail
 # ... Run whatever commands ...
