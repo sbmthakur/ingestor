@@ -1,5 +1,6 @@
 # Ingestor
 
+
 Ingestor is responsible for getting the data from Nexrad's S3 bucket and generating a plot from. The service is a HTTP server and exposes two endpoints which can be used to get radar availability and reflectivity plots for a given date.
 
 **The plot helps us to understand the reflectivity pattern for the given date.**
